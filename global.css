@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 33% 98%;
+    --foreground: 224 37% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 37% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 37% 15%;
+    --primary: 251 89% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 230 28% 96%;
+    --secondary-foreground: 224 37% 15%;
+    --muted: 230 28% 96%;
+    --muted-foreground: 222 13% 49%;
+    --accent: 251 89% 96%;
+    --accent-foreground: 251 65% 50%;
+    --destructive: 0 72% 56%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 225 21% 91%;
+    --input: 225 21% 91%;
+    --ring: 251 89% 65%;
+    --radius: 0.75rem;
+  }
+
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; font-family: "DM Sans", sans-serif; }
+  button, input, select { font: inherit; }
+}
+
+.checkerboard {
+  background-color: #f0f1f5;
+  background-image: linear-gradient(45deg, #e8eaf0 25%, transparent 25%), linear-gradient(-45deg, #e8eaf0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e8eaf0 75%), linear-gradient(-45deg, transparent 75%, #e8eaf0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.range { appearance: none; height: 5px; border-radius: 999px; background: linear-gradient(90deg, #7658f6 0%, #7658f6 9%, #e2e4ed 9%, #e2e4ed 100%); cursor: pointer; }
+.range::-webkit-slider-thumb { appearance: none; width: 17px; height: 17px; border: 3px solid white; border-radius: 999px; background: #7658f6; box-shadow: 0 1px 5px rgba(54, 39, 134, .35); }
+.range::-moz-range-thumb { width: 13px; height: 13px; border: 3px solid white; border-radius: 999px; background: #7658f6; box-shadow: 0 1px 5px rgba(54, 39, 134, .35); }
